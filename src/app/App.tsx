@@ -60,6 +60,13 @@ export default function App() {
       image: PollFlowImg,
     },
     {
+      title: 'SynthoCAD - AI-Powered CAD Generation',
+      description: 'Compiler-style pipeline that transforms natural language into parametric CAD models through LLM-powered feature extraction, template retrieval, and deterministic scaling.',
+      tech: ['Python', 'Flask', 'Google Gemini', 'CadQuery'],
+      github: 'https://github.com/S-Sivahari/SynthoCAD',
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop',
+    },
+    {
       title: 'V.I.T.A.L Dashboard',
       description: 'Agricultural disaster management system for village officers with farmer tracking, subsidy calculation, and real-time analytics.',
       tech: ['React', 'Firebase', 'Tailwind CSS', 'Zustand'],
@@ -72,13 +79,6 @@ export default function App() {
       tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn/ui'],
       github: 'https://github.com/S-Sivahari/AttendX-Frontend',
       image: 'https://images.unsplash.com/photo-1595079676339-1534801ad6cf?w=600&h=400&fit=crop',
-    },
-    {
-      title: 'FlixZone - Streaming Platform',
-      description: 'Netflix-inspired streaming platform with secure authentication, content browsing, and responsive video player.',
-      tech: ['React', 'Firebase', 'Vite', 'CSS'],
-      github: 'https://github.com/S-Sivahari/FlixZone',
-      image: 'https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=600&h=400&fit=crop',
     },
   ];
 
@@ -130,12 +130,11 @@ export default function App() {
     {
       platform: 'LeetCode',
       username: 'Sivahari_S',
-      rating: '1800',
-      rank: 'Top 7.63%',
-      badge: 'Guardian',
-      problemsSolved: '532+',
+      rating: '1775',
+      rank: 'Top 8.76%',
+      problemsSolved: '590+',
       maxRating: '1800',
-      bestRank: 'Top 7.63%',
+      bestRank: 'Top 8.76%',
       url: 'https://leetcode.com/u/Sivahari_S/',
       color: 'from-orange-400/70 to-yellow-400/70',
       bgGradient: 'from-orange-500/5 via-yellow-500/3 to-orange-500/5',
@@ -144,10 +143,9 @@ export default function App() {
     {
       platform: 'CodeChef',
       username: 'sivahari_3773',
-      rating: '1390',
-      rank: '1★',
-      badge: '1 Star',
-      problemsSolved: '690+',
+      rating: '1436',
+      rank: '2★',
+      problemsSolved: '698+',
       maxRating: '1523',
       bestRank: '2★',
       url: 'https://www.codechef.com/users/sivahari_3773',
@@ -160,8 +158,7 @@ export default function App() {
       username: 'sivahari2105',
       rating: 'Unrated',
       rank: 'Unrated',
-      badge: 'Newbie',
-      problemsSolved: '10+',
+      problemsSolved: '0',
       maxRating: 'Unrated',
       bestRank: 'Unrated',
       url: 'https://codeforces.com/profile/sivahari2105',
@@ -523,15 +520,6 @@ export default function App() {
                       <p className="text-white font-semibold text-base">@{profile.username}</p>
                     </div>
 
-                    {/* Badge/Status */}
-                    <div className="mb-1.5">
-                      <div className={`inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-gradient-to-r ${profile.color} bg-opacity-20 border border-white/10`}>
-                        <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                        <span className="text-white text-sm font-semibold">{profile.badge}</span>
-                      </div>
-                    </div>
 
                     {/* Stats Grid */}
                     <div className="grid grid-cols-2 gap-1.5 mb-1.5">
