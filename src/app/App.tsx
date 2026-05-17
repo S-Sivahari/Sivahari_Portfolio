@@ -3,6 +3,9 @@ import { Navbar } from './components/Navbar';
 import { Github, Linkedin, Instagram, Mail, FileDown, Copy, Check, ExternalLink, Code2, Layout, Database, Brain, Wrench, BookOpen, Trophy, Laptop, Sparkles, Heart, Twitter } from 'lucide-react';
 import PollFlowImg from '../../PollFlow.png';
 import VITALImg from '../../V.I.T.A.L.png';
+import SynthoCADImg from '../../pics/synthocad.png';
+import PollingImg from '../../pics/polling.png';
+import SentinelAIImg from '../../pics/sentinel-ai.png';
 import { Button } from './components/ui/button';
 import { Card } from './components/ui/card';
 import { Input } from './components/ui/input';
@@ -53,32 +56,33 @@ export default function App() {
 
   const projects = [
     {
-      title: 'PollFlow - College Polling System',
-      description: 'Comprehensive real-time polling system with multi-role access, advanced scheduling, and analytics for Chennai Institute of Technology.',
-      tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Supabase'],
-      github: 'https://github.com/S-Sivahari/CIT_Polling_System',
-      image: PollFlowImg,
-    },
-    {
       title: 'SynthoCAD - AI-Powered CAD Generation',
       description: 'Compiler-style pipeline that transforms natural language into parametric CAD models through LLM-powered feature extraction, template retrieval, and deterministic scaling.',
       tech: ['Python', 'Flask', 'Google Gemini', 'CadQuery'],
       github: 'https://github.com/S-Sivahari/SynthoCAD',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop',
+      image: SynthoCADImg,
     },
     {
-      title: 'V.I.T.A.L Dashboard',
-      description: 'Agricultural disaster management system for village officers with farmer tracking, subsidy calculation, and real-time analytics.',
-      tech: ['React', 'Firebase', 'Tailwind CSS', 'Zustand'],
-      github: 'https://github.com/S-Sivahari/V.I.T.A.L-Dashboard',
-      image: VITALImg,
+      title: 'PollFlow - College Polling System',
+      description: 'Comprehensive real-time polling system with multi-role access, advanced scheduling, and analytics for Chennai Institute of Technology.',
+      tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Supabase'],
+      github: 'https://github.com/S-Sivahari/CIT_Polling_System',
+      image: PollingImg,
     },
     {
-      title: 'AttendX - QR Check-in System',
-      description: 'Staff attendance management solution with QR scanning, multiple check-in methods, and automatic logging.',
-      tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn/ui'],
-      github: 'https://github.com/S-Sivahari/AttendX-Frontend',
-      image: 'https://images.unsplash.com/photo-1595079676339-1534801ad6cf?w=600&h=400&fit=crop',
+      title: 'Sentinel AI - Border Threat Detection',
+      description: 'Real-time AI-powered surveillance system detecting threats using YOLO v8 object detection, persistent tracking, polygon zone intrusion detection, tripwire crossing alerts, and intelligent threat scoring.',
+      tech: ['Python', 'Flask', 'YOLOv8', 'ByteTrack', 'HTML5', 'JavaScript'],
+      github: 'https://github.com/S-Sivahari/SENTINEL-AI',
+      image: SentinelAIImg,
+    },
+    {
+      title: 'Vortex AI - Multi-Modal AI Content Detection',
+      description: 'Multi-modal AI detection engine identifying AI-generated text, images, audio, deepfake video, and documents using transformer models, CNNs, frequency analysis, and RAG pipeline for comprehensive content intelligence.',
+      tech: ['Python', 'FastAPI', 'DistilBERT', 'CNNs', 'Whisper', 'React', 'TypeScript'],
+      github: 'https://github.com/S-Sivahari/Vortex.ai',
+      image: 'none',
+      gradient: 'from-indigo-600 to-purple-600',
     },
   ];
 
@@ -364,13 +368,27 @@ export default function App() {
                   className="group relative bg-zinc-900/60 border border-white/10 backdrop-blur-sm rounded-xl overflow-hidden hover:border-purple-400/50 hover:shadow-[0_0_25px_rgba(168,85,247,0.2)] hover:-translate-y-1 transition-all duration-300 flex flex-col"
                 >
                   {/* Project Image */}
-                  <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                  <div className={`relative h-48 overflow-hidden ${project.gradient ? `bg-gradient-to-br ${project.gradient}` : 'bg-gradient-to-br from-purple-600 to-pink-600'}`}>
+                    {project.image && project.image !== 'none' ? (
+                      <>
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                          }}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                      </>
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <div className="text-white text-center">
+                          <Code2 className="w-12 h-12 mx-auto mb-2 opacity-60" />
+                          <p className="text-sm opacity-60">{project.title}</p>
+                        </div>
+                      </div>
+                    )}
                   </div>
                   
                   <div className="relative p-5 sm:p-6 flex flex-col flex-1">
