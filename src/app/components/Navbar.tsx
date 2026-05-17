@@ -2,11 +2,12 @@ import { useState, useEffect } from 'react';
 
 const navItems = [
   { id: 'about', label: 'About' },
-  { id: 'skills', label: 'Skills' },
   { id: 'projects', label: 'Projects' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'achievements', label: 'Achievements' },
   { id: 'education', label: 'Education' },
   { id: 'cp-profiles', label: 'CP Profiles' },
-  { id: 'achievements', label: 'Achievements' },
   { id: 'contact', label: 'Contact' },
 ];
 

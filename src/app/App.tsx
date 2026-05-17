@@ -132,7 +132,7 @@ export default function App() {
       username: 'Sivahari_S',
       rating: '1775',
       rank: 'Top 8.76%',
-      problemsSolved: '590+',
+      problemsSolved: '600+',
       maxRating: '1800',
       bestRank: 'Top 8.76%',
       url: 'https://leetcode.com/u/Sivahari_S/',
@@ -165,6 +165,20 @@ export default function App() {
       color: 'from-cyan-400/70 to-blue-400/70',
       bgGradient: 'from-cyan-500/5 via-blue-500/3 to-cyan-500/5',
       glowColor: 'rgba(59, 130, 246, 0.3)',
+    },
+  ];
+
+  const experience = [
+    {
+      title: 'AI Automation Engineer',
+      company: 'BSAP AI',
+      period: 'Jan 2026 – Apr 2026',
+      description: 'Built an AI-powered CAD generation platform using Python Flask, LLMs (Gemini/Ollama), and CadQuery for natural language-to-3D model conversion with RAG-based template retrieval.',
+      highlights: [
+        'Developed 10+ features including STEP file editing, geometric previews, parameter updates, and FreeCAD integration',
+        'Supported 100+ engineering templates with robust error handling',
+        'Implemented compiler-style pipeline for natural language to CAD model conversion',
+      ],
     },
   ];
 
@@ -337,39 +351,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* Skills Section */}
-        <section id="skills" className="flex items-center px-4 sm:px-6 py-16 sm:py-24 bg-gradient-to-b from-transparent via-purple-950/5 to-transparent">
-          <div className="max-w-6xl w-full mx-auto">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-12 sm:mb-16 text-center leading-tight font-semibold">
-              Skills & Technologies
-            </h2>
-            <div className="flex flex-col gap-8 sm:gap-10">
-              {skillsCategories.map((category, categoryIndex) => (
-                <div key={categoryIndex} className="group">
-                  <div className="flex items-center gap-2.5 mb-4 sm:mb-5">
-                    <category.icon className="w-5 h-5 text-purple-400" />
-                    <h3 className="text-lg sm:text-xl font-semibold text-white">{category.title}</h3>
-                  </div>
-                  <div className="flex flex-wrap gap-2.5">
-                    {category.skills.map((skill, index) => (
-                      <div
-                        key={index}
-                        className={`relative rounded-xl px-4 py-2.5 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 cursor-default
-                          ${index % 3 === 0 ? 'bg-purple-500/10 border border-purple-500/30 hover:border-purple-400 hover:bg-purple-500/20 hover:shadow-[0_0_20px_rgba(168,85,247,0.3)]' : ''}
-                          ${index % 3 === 1 ? 'bg-pink-500/10 border border-pink-500/30 hover:border-pink-400 hover:bg-pink-500/20 hover:shadow-[0_0_20px_rgba(236,72,153,0.3)]' : ''}
-                          ${index % 3 === 2 ? 'bg-white/5 border border-white/20 hover:border-purple-400/50 hover:bg-white/10 hover:shadow-[0_0_20px_rgba(168,85,247,0.25)]' : ''}
-                        `}
-                      >
-                        <p className="text-center text-sm text-white font-medium whitespace-nowrap">{skill}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Projects Section */}
         <section id="projects" className="flex items-center px-4 sm:px-6 py-16 sm:py-24 bg-gradient-to-b from-transparent via-zinc-900/50 to-transparent">
           <div className="max-w-6xl w-full mx-auto">
@@ -417,6 +398,126 @@ export default function App() {
                     >
                       <ExternalLink className="w-4 h-4 text-white" />
                     </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Experience Section */}
+        <section
+          id="experience"
+          className="flex items-center px-4 sm:px-6 py-16 sm:py-24 bg-gradient-to-b from-transparent via-purple-950/5 to-transparent"
+        >
+          <div className="max-w-4xl w-full mx-auto">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-12 sm:mb-16 text-center leading-tight font-semibold">
+              Experience
+            </h2>
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-purple-500/50 via-pink-500/30 to-transparent hidden sm:block" />
+              <div className="flex flex-col gap-8">
+                {experience.map((exp, index) => (
+                  <div key={index} className="group relative sm:pl-16">
+                    {/* Timeline dot */}
+                    <div className="absolute left-4 top-6 w-4 h-4 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 border-2 border-black hidden sm:block" />
+                    <div className="bg-zinc-900/60 border border-white/10 backdrop-blur-sm rounded-xl p-6 hover:border-purple-400/50 hover:shadow-[0_0_25px_rgba(168,85,247,0.2)] hover:-translate-y-1 transition-all duration-300">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+                        <div>
+                          <h3 className="text-lg sm:text-xl text-white font-semibold">{exp.title}</h3>
+                          <p className="text-purple-300 text-sm font-medium mt-0.5">{exp.company}</p>
+                        </div>
+                        <span className="text-xs text-gray-400 bg-white/5 border border-white/10 px-3 py-1 rounded-full whitespace-nowrap self-start">{exp.period}</span>
+                      </div>
+                      <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                        {exp.description}
+                      </p>
+                      {exp.highlights && exp.highlights.length > 0 && (
+                        <ul className="space-y-2">
+                          {exp.highlights.map((highlight, i) => (
+                            <li key={i} className="text-gray-300 text-sm flex items-start gap-2">
+                              <span className="text-purple-400 mt-1">•</span>
+                              <span>{highlight}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Skills Section */}
+        <section id="skills" className="flex items-center px-4 sm:px-6 py-16 sm:py-24 bg-gradient-to-b from-transparent via-purple-950/5 to-transparent">
+          <div className="max-w-6xl w-full mx-auto">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-12 sm:mb-16 text-center leading-tight font-semibold">
+              Skills & Technologies
+            </h2>
+            <div className="flex flex-col gap-8 sm:gap-10">
+              {skillsCategories.map((category, categoryIndex) => (
+                <div key={categoryIndex} className="group">
+                  <div className="flex items-center gap-2.5 mb-4 sm:mb-5">
+                    <category.icon className="w-5 h-5 text-purple-400" />
+                    <h3 className="text-lg sm:text-xl font-semibold text-white">{category.title}</h3>
+                  </div>
+                  <div className="flex flex-wrap gap-2.5">
+                    {category.skills.map((skill, index) => (
+                      <div
+                        key={index}
+                        className={`relative rounded-xl px-4 py-2.5 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 cursor-default
+                          ${index % 3 === 0 ? 'bg-purple-500/10 border border-purple-500/30 hover:border-purple-400 hover:bg-purple-500/20 hover:shadow-[0_0_20px_rgba(168,85,247,0.3)]' : ''}
+                          ${index % 3 === 1 ? 'bg-pink-500/10 border border-pink-500/30 hover:border-pink-400 hover:bg-pink-500/20 hover:shadow-[0_0_20px_rgba(236,72,153,0.3)]' : ''}
+                          ${index % 3 === 2 ? 'bg-white/5 border border-white/20 hover:border-purple-400/50 hover:bg-white/10 hover:shadow-[0_0_20px_rgba(168,85,247,0.25)]' : ''}
+                        `}
+                      >
+                        <p className="text-center text-sm text-white font-medium whitespace-nowrap">{skill}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Achievements Section */}
+        <section
+          id="achievements"
+          className="flex items-center px-4 sm:px-6 py-16 sm:py-24 bg-gradient-to-b from-transparent via-purple-950/5 to-transparent"
+        >
+          <div className="max-w-4xl w-full mx-auto">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-12 sm:mb-16 text-center leading-tight font-semibold">
+              Achievements
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {achievements.map((achievement, index) => (
+                <div
+                  key={index}
+                  className="group relative bg-zinc-900/60 border border-white/10 backdrop-blur-sm rounded-xl p-6 hover:border-pink-400/50 hover:shadow-[0_0_25px_rgba(236,72,153,0.2)] hover:-translate-y-1 transition-all duration-300"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                      <svg
+                        className="w-6 h-6 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg mb-2 text-white font-semibold leading-snug">{achievement.title}</h3>
+                      <p className="text-gray-400 text-sm mb-2 leading-relaxed">
+                        {achievement.organization}
+                      </p>
+                      <p className="text-purple-400 text-sm font-medium">
+                        {achievement.year}
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -567,47 +668,6 @@ export default function App() {
                       <span>View Profile</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Achievements Section */}
-        <section
-          id="achievements"
-          className="flex items-center px-4 sm:px-6 py-16 sm:py-24 bg-gradient-to-b from-transparent via-purple-950/5 to-transparent"
-        >
-          <div className="max-w-4xl w-full mx-auto">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-12 sm:mb-16 text-center leading-tight font-semibold">
-              Achievements
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {achievements.map((achievement, index) => (
-                <div
-                  key={index}
-                  className="group relative bg-zinc-900/60 border border-white/10 backdrop-blur-sm rounded-xl p-6 hover:border-pink-400/50 hover:shadow-[0_0_25px_rgba(236,72,153,0.2)] hover:-translate-y-1 transition-all duration-300"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
-                      <svg
-                        className="w-6 h-6 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg mb-2 text-white font-semibold leading-snug">{achievement.title}</h3>
-                      <p className="text-gray-400 text-sm mb-2 leading-relaxed">
-                        {achievement.organization}
-                      </p>
-                      <p className="text-purple-400 text-sm font-medium">
-                        {achievement.year}
-                      </p>
-                    </div>
                   </div>
                 </div>
               ))}
