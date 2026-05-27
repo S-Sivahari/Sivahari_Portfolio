@@ -3,6 +3,7 @@ import { Navbar } from './components/Navbar';
 import { Github, Linkedin, Instagram, Mail, FileDown, Copy, Check, ExternalLink, Code2, Layout, Database, Brain, Wrench, BookOpen, Trophy, Laptop, Sparkles, Heart, Twitter } from 'lucide-react';
 import PollFlowImg from '../../PollFlow.png';
 import VITALImg from '../../V.I.T.A.L.png';
+import FlowImg from '../../pics/flow.png';
 import SynthoCADImg from '../../pics/synthocad.png';
 import PollingImg from '../../pics/polling.png';
 import SentinelAIImg from '../../pics/sentinel-ai.png';
@@ -25,32 +26,32 @@ export default function App() {
     {
       title: 'Programming Languages',
       icon: Code2,
-      skills: ['Python', 'JavaScript', 'TypeScript', 'C++', 'C', 'Java', 'SQL'],
+      skills: ['Python', 'SQL', 'Swift', 'JavaScript', 'C++', 'C', 'Java', 'TypeScript'],
     },
     {
-      title: 'Frontend Development',
-      icon: Layout,
-      skills: ['React', 'Next.js', 'HTML', 'CSS', 'Tailwind CSS'],
-    },
-    {
-      title: 'Backend & Databases',
-      icon: Database,
-      skills: ['Node.js', 'Express.js', 'Flask', 'Firebase', 'Supabase', 'MySQL', 'PostgreSQL', 'MongoDB'],
-    },
-    {
-      title: 'Data & AI Tools',
+      title: 'Artificial Intelligence',
       icon: Brain,
-      skills: ['Matplotlib', 'NumPy', 'Tableau', 'Machine Learning'],
+      skills: ['TensorFlow', 'PyTorch', 'Scikit-Learn', 'Matplotlib', 'OpenCV', 'Pandas', 'Keras', 'NumPy', 'Tableau'],
     },
     {
-      title: 'Tools & Platforms',
+      title: 'DevOps and Cloud',
       icon: Wrench,
-      skills: ['Git', 'GitHub', 'VS Code', 'Vercel', 'Vite'],
+      skills: ['Git', 'GitHub', 'Docker'],
+    },
+    {
+      title: 'Frontend and Design',
+      icon: Layout,
+      skills: ['HTML', 'CSS', 'React.js', 'Next.js', 'Canva', 'Streamlit', 'Figma'],
+    },
+    {
+      title: 'Backend and Databases',
+      icon: Database,
+      skills: ['MySQL', 'PostgreSQL', 'MongoDB', 'Firebase', 'Node.js', 'Express.js', 'Flask'],
     },
     {
       title: 'CS Fundamentals',
       icon: BookOpen,
-      skills: ['Data Structures', 'Algorithms', 'DBMS', 'OOPs', 'Operating Systems', 'Computer Networks'],
+      skills: ['Data Structures', 'Algorithms', 'Computer Networks', 'Operating Systems', 'DBMS', 'OOPs', 'Machine Learning'],
     },
   ];
 
@@ -70,19 +71,33 @@ export default function App() {
       image: PollingImg,
     },
     {
-      title: 'Sentinel AI - Border Threat Detection',
-      description: 'Real-time AI-powered surveillance system detecting threats using YOLO v8 object detection, persistent tracking, polygon zone intrusion detection, tripwire crossing alerts, and intelligent threat scoring.',
-      tech: ['Python', 'Flask', 'YOLOv8', 'ByteTrack', 'HTML5', 'JavaScript'],
-      github: 'https://github.com/S-Sivahari/SENTINEL-AI',
-      image: SentinelAIImg,
-    },
-    {
       title: 'Vortex AI - Multi-Modal AI Content Detection',
       description: 'Multi-modal AI detection engine identifying AI-generated text, images, audio, deepfake video, and documents using transformer models, CNNs, frequency analysis, and RAG pipeline for comprehensive content intelligence.',
       tech: ['Python', 'FastAPI', 'DistilBERT', 'CNNs', 'Whisper', 'React', 'TypeScript'],
       github: 'https://github.com/S-Sivahari/Vortex.ai',
       image: 'none',
       gradient: 'from-indigo-600 to-purple-600',
+    },
+    {
+      title: 'F.L.O.W - Workflow Management Platform',
+      description: 'A comprehensive workflow management platform designed to help teams efficiently manage task assignments, track effort, handle approvals, monitor dependencies, and collaborate seamlessly through an intuitive dashboard interface.',
+      tech: ['React', 'Node.js', 'MongoDB', 'Workflow Automation', 'Team Collaboration'],
+      github: 'https://github.com/S-Sivahari/F.L.O.W.git',
+      image: FlowImg,
+    },
+    {
+      title: 'V.I.T.A.L Dashboard - Agricultural Disaster Management',
+      description: 'An intelligent agricultural disaster management platform enabling seamless real-time collaboration between district and village officers for comprehensive farmer support, disaster issue tracking, and automated subsidy distribution.',
+      tech: ['React', 'Node.js', 'MongoDB', 'Real-time Collaboration', 'Disaster Management'],
+      github: 'https://github.com/S-Sivahari/V.I.T.A.L-Dashboard.git',
+      image: VITALImg,
+    },
+    {
+      title: 'Sentinel AI - Border Threat Detection',
+      description: 'Real-time AI-powered surveillance system detecting threats using YOLO v8 object detection, persistent tracking, polygon zone intrusion detection, tripwire crossing alerts, and intelligent threat scoring.',
+      tech: ['Python', 'Flask', 'YOLOv8', 'ByteTrack', 'HTML5', 'JavaScript'],
+      github: 'https://github.com/S-Sivahari/SENTINEL-AI',
+      image: SentinelAIImg,
     },
   ];
 
@@ -174,6 +189,17 @@ export default function App() {
 
   const experience = [
     {
+      title: 'Software Development Intern',
+      company: 'EPICAL LAYOUTS',
+      period: 'May 2026 – Present',
+      description: 'Spearheaded a team of 9 to build a full-stack HRMS from scratch using React, Node.js, and MongoDB, migrating Excel-based workflows to a dynamic platform serving 50 concurrent users.',
+      highlights: [
+        'Engineered role-based admin and employee portals with JWT authentication, automated payroll, leave management, and real-time HR analytics',
+        'Integrated 10+ modules including attendance, performance tracking, document management, and workflow automation',
+        'Optimized platform performance to handle 50 concurrent users with efficient database queries and caching strategies',
+      ],
+    },
+    {
       title: 'AI Automation Engineer',
       company: 'BSAP AI',
       period: 'Jan 2026 – Apr 2026',
@@ -227,7 +253,7 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-slate-950 text-white">
       <FloatingParticles />
       <Navbar />
 
@@ -444,11 +470,11 @@ export default function App() {
                       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                         <div>
                           <h3 className="text-lg sm:text-xl text-white font-semibold">{exp.title}</h3>
-                          <p className="text-purple-300 text-sm font-medium mt-0.5">{exp.company}</p>
+                          <p className="text-gray-300 text-sm font-medium mt-0.5">{exp.company}</p>
                         </div>
-                        <span className="text-xs text-gray-400 bg-white/5 border border-white/10 px-3 py-1 rounded-full whitespace-nowrap self-start">{exp.period}</span>
+                        <span className="text-xs text-gray-300 bg-white/5 border border-white/10 px-3 py-1 rounded-full whitespace-nowrap self-start">{exp.period}</span>
                       </div>
-                      <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                      <p className="text-gray-300 text-sm leading-relaxed mb-4">
                         {exp.description}
                       </p>
                       {exp.highlights && exp.highlights.length > 0 && (
@@ -559,13 +585,13 @@ export default function App() {
                   className="group relative bg-zinc-900/60 border border-white/10 backdrop-blur-sm rounded-xl p-6 hover:border-purple-400/50 hover:shadow-[0_0_25px_rgba(168,85,247,0.2)] hover:-translate-y-1 transition-all duration-300"
                 >
                   <h3 className="text-base sm:text-lg mb-2.5 text-white font-bold leading-snug">{edu.degree}</h3>
-                  <p className="text-purple-300 mb-1.5 text-sm font-medium">{edu.institution}</p>
-                  <p className="text-gray-500 text-xs mb-1">{edu.period} — {edu.location}</p>
-                  <p className="text-white text-sm font-medium mb-2">{edu.grade}</p>
+                  <p className="text-gray-300 mb-1.5 text-sm font-medium">{edu.institution}</p>
+                  <p className="text-gray-300 text-xs mb-1">{edu.period} — {edu.location}</p>
+                  <p className="text-purple-300 text-sm font-medium mb-2">{edu.grade}</p>
                   {edu.highlights && edu.highlights.length > 0 && (
                     <ul className="mt-3 space-y-1.5">
                       {edu.highlights.map((highlight, i) => (
-                        <li key={i} className="text-gray-400 text-xs flex items-start gap-2">
+                        <li key={i} className="text-gray-300 text-xs flex items-start gap-2">
                           <span className="text-purple-400 mt-0.5">•</span>
                           <span>{highlight}</span>
                         </li>
