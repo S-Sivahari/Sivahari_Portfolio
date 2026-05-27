@@ -1,11 +1,11 @@
 import { FloatingParticles } from './components/FloatingParticles';
 import { Navbar } from './components/Navbar';
 import { Github, Linkedin, Instagram, Mail, FileDown, Copy, Check, ExternalLink, Code2, Layout, Database, Brain, Wrench, BookOpen, Trophy, Laptop, Sparkles, Heart, Twitter } from 'lucide-react';
-import SynthoCADImg from '../../pics/synthocad.png';
-import PollingImg from '../../pics/polling.png';
-import FlowImg from '../../pics/flow.png';
-import VITALImg from '../../pics/vital.png';
-import SentinelAIImg from '../../pics/sentinel-ai.png';
+import SynthoCADImg from '@/pics/synthocad.png';
+import PollingImg from '@/pics/polling.png';
+import FlowImg from '@/pics/flow.png';
+import VITALImg from '@/pics/vital.png';
+import SentinelAIImg from '@/pics/sentinel-ai.png';
 import { Button } from './components/ui/button';
 import { Card } from './components/ui/card';
 import { Input } from './components/ui/input';
