@@ -213,13 +213,18 @@ export default function App() {
 
   const achievements = [
     {
-      title: 'Codeathon Top 20',
-      organization: 'Placed in Top 20 in a coding competition conducted at college',
+      title: 'Smart India Hackathon (SIH) - Internal Hackathon',
+      organization: 'Nominated for the internal hackathon national selection round',
       year: '2024',
     },
     {
-      title: 'Smart India Hackathon - Internal Round',
-      organization: 'Selected in Top 50 from 300+ teams in SIH internal hackathon',
+      title: 'Epical Hackathon - 3rd Place',
+      organization: 'Secured 3rd place for optimizing database workflows',
+      year: '',
+    },
+    {
+      title: 'Codeathon Competition - Top 20',
+      organization: 'Selected and ranked within the Top 20 competitors at the college level',
       year: '2024',
     },
   ];
@@ -557,9 +562,11 @@ export default function App() {
                       <p className="text-gray-400 text-sm mb-2 leading-relaxed">
                         {achievement.organization}
                       </p>
-                      <p className="text-purple-400 text-sm font-medium">
-                        {achievement.year}
-                      </p>
+                      {achievement.year && (
+                        <p className="text-purple-400 text-sm font-medium">
+                          {achievement.year}
+                        </p>
+                      )}
                     </div>
                   </div>
                 </div>
