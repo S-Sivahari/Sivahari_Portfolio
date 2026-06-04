@@ -213,14 +213,14 @@ export default function App() {
 
   const achievements = [
     {
+      title: 'Epical Hackathon - 2nd Place',
+      organization: 'Secured 2nd place for optimizing database workflows',
+      year: '',
+    },
+    {
       title: 'Smart India Hackathon (SIH) - Internal Hackathon',
       organization: 'Nominated for the internal hackathon national selection round',
       year: '2024',
-    },
-    {
-      title: 'Epical Hackathon - 3rd Place',
-      organization: 'Secured 3rd place for optimizing database workflows',
-      year: '',
     },
     {
       title: 'Codeathon Competition - Top 20',
