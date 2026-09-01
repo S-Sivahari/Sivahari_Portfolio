@@ -4,7 +4,6 @@ import { Github, Linkedin, Instagram, Mail, FileDown, Copy, Check, ExternalLink,
 import SynthoCADImg from '@/pics/synthocad.png';
 import PollingImg from '@/pics/polling.png';
 import FlowImg from '@/pics/flow.png';
-import VITALImg from '@/pics/vital.png';
 import SentinelAIImg from '@/pics/sentinel-ai.png';
 import { Button } from './components/ui/button';
 import { Card } from './components/ui/card';
@@ -82,21 +81,6 @@ export default function App() {
       tech: ['Python', 'Flask', 'Gemini', 'ChromaDB', 'Three.js'],
       github: 'https://github.com/S-Sivahari/SynthoCAD',
       image: SynthoCADImg,
-    },
-    {
-      title: 'V.I.T.A.L Dashboard - Agricultural Disaster Management',
-      description: 'An intelligent agricultural disaster management platform enabling seamless real-time collaboration between district and village officers for comprehensive farmer support, disaster issue tracking, and automated subsidy distribution.',
-      tech: ['React', 'Node.js', 'MongoDB', 'Real-time Collaboration', 'Disaster Management'],
-      github: 'https://github.com/S-Sivahari/V.I.T.A.L-Dashboard.git',
-      image: VITALImg,
-    },
-    {
-      title: 'Vortex AI - Multi-Modal AI Content Detection',
-      description: 'Multi-modal AI detection engine identifying AI-generated text, images, audio, deepfake video, and documents using transformer models, CNNs, frequency analysis, and RAG pipeline for comprehensive content intelligence.',
-      tech: ['Python', 'FastAPI', 'DistilBERT', 'CNNs', 'Whisper', 'React', 'TypeScript'],
-      github: 'https://github.com/S-Sivahari/Vortex.ai',
-      image: 'none',
-      gradient: 'from-indigo-600 to-purple-600',
     },
   ];
 
